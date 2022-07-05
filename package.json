@@ -1,0 +1,27 @@
+{
+  "name": "interactive-rating-component-main",
+  "version": "1.0.0",
+  "description": "![interactive-rating-compoment](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibra-san/interactive-rating-component-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibra-san/interactive-rating-component-main/issues"
+  },
+  "homepage": "https://github.com/ibra-san/interactive-rating-component-main#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

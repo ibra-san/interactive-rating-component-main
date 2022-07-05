@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss\\main.scss"],"names":[],"mappings":"AAGA;EACI,YAJO","file":"main.77bb5cfd.css","sourceRoot":"..\\src","sourcesContent":["$niceblue: rgba(199, 199, 255, 0.959);\r\n\r\n\r\nbody { \r\n    background: $niceblue; \r\n}"]}
