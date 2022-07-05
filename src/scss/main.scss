@@ -1,6 +1,161 @@
-$niceblue: rgba(199, 199, 255, 0.959);
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville:ital@0;1&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lustria&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/*
+
+font-family: 'Arvo', serif;
+font-family: 'Baskervville', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lustria', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Overpass', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Questrial', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Unna', serif;
+
+*/
+
+
+$--very-darkblue: hsl(216, 12%, 8%);
+$--medium-grey: hsl(216, 12%, 54%);
+$--light-grey: hsl(217, 12%, 63%);
+$--semi-darkblue: hsl(219, 12%, 21%);
+$--dark-blue:hsl(213, 19%, 15%);
+$--header-color: white; 
+$--orange-color: hsl(25, 97%, 53%); 
+$--main-font: 'Overpass', sans-serif;
+$--heavy-font-weight: 700;
+$--light-font-weight:400; 
+$--text-font-size: 15px; 
+
+
+* { 
+    padding: 0px;
+    margin: 0px;
+}
 
 body { 
-    background: $niceblue; 
+    background: $--very-darkblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $--header-color;
+    font-family: $--main-font;
 }
+
+.card { 
+    border-radius: 30px;
+    background-color: $--dark-blue;
+    
+    display: flex; 
+    flex-direction: column;
+    
+    width:330px;
+    height: 325px;
+
+    padding: 10px 25px;
+    margin-bottom: 20px;
+
+    &__rate { 
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+.rate { 
+
+    &__star { 
+
+        
+
+        &--icon { 
+        
+            background-color: $--semi-darkblue;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 10px;
+            width: 10px;
+            padding: 15px 15px;
+
+            margin-top: 15px;
+            margin-bottom: 25px;
+            
+            border-radius:500px ;
+
+        }
+    }
+
+    &__title { 
+        font-weight: $--heavy-font-weight;
+        font-size: 25px;
+
+        margin-bottom: 10px;
+    }
+
+    &__text { 
+        font-size: $--text-font-size;
+        color: $--light-grey;
+    }
+
+    &__container { 
+        list-style-type: none;
+
+        display: flex;
+        justify-content: space-around; 
+
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        &--numbers{ 
+            border-radius: 5000px ;
+
+            background-color: $--semi-darkblue;
+            color: $--light-grey;
+            font-weight: $--light-font-weight;
+
+            width: 20px;
+            height: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 10px 10px;
+            
+        }
+    }
+
+    &__submit { 
+        border-radius: 50px;
+
+        padding: 10px 10px;
+
+        background-color: $--orange-color;
+        
+        font-family: $--main-font;
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: $--header-color;
+    }
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
