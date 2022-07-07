@@ -70,6 +70,30 @@ body {
   height: 100%;
   padding: 20px 20px;
   background-color: hsl(213deg, 19%, 15%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__thankyou--img {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.card__thankyou--rate {
+  border-radius: 20px;
+  background-color: hsl(219deg, 12%, 21%);
+  color: hsl(25deg, 97%, 53%);
+  font-size: 14px;
+  padding: 7px 20px;
+  margin-bottom: 25px;
+}
+.card__thankyou--thankyou {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+.card__thankyou--text {
+  color: hsl(217deg, 12%, 63%);
+  text-align: center;
+  font-size: 15px;
 }
 
 .rate__star--icon {

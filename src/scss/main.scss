@@ -99,7 +99,43 @@ body {
         padding: 20px 20px;
         
         background-color: $--dark-blue;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
+
+        &--img { 
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        &--rate { 
+        
+            border-radius: 20px;
+
+            background-color: $--semi-darkblue;
+
+            color: $--orange-color;
+            
+            font-size: 14px;
+
+            padding: 7px 20px;
+            margin-bottom: 25px;
+        }
+
+        &--thankyou { 
+            margin-bottom:15px ;
+
+            font-size: 25px;
+        }
+
+        &--text { 
+            
+            color: $--light-grey;
+            text-align: center;
+            font-size: 15px;
+        }
         
     }
 }
@@ -184,7 +220,6 @@ body {
         letter-spacing: 3px;
         color: $--header-color;
     }
-
 }
 
 
