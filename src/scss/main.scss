@@ -100,7 +100,7 @@ body {
         
         background-color: $--dark-blue;
 
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         
@@ -190,19 +190,32 @@ body {
 
         &--numbers{ 
             border-radius: 5000px ;
+            border-color: transparent;
 
             background-color: $--semi-darkblue;
             color: $--light-grey;
             font-weight: $--light-font-weight;
 
-            width: 20px;
-            height: 20px;
+            width: 50px;
+            height: 50px;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
             padding: 10px 10px;
+            
+            &:hover{ 
+                cursor: pointer;
+
+                background-color: $--orange-color;
+                color: $--header-color;
+            }
+
+            &:focus { 
+                background-color: $--light-grey;
+                color: white;
+            }
             
         }
     }
@@ -219,6 +232,14 @@ body {
         font-size: 15px;
         letter-spacing: 3px;
         color: $--header-color;
+
+
+        &:hover { 
+            background-color: $--header-color;
+            color: $--orange-color;
+            
+            cursor: pointer;
+        }
     }
 }
 
