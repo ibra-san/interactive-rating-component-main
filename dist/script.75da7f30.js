@@ -118,11 +118,53 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"script.js":[function(require,module,exports) {
-var rateContainer = document.querySelector(".rate__container");
-var inputRadio = document.querySelectorAll(".input__radio");
-rateContainer.addEventListener("mousemove", function () {
-  console.log("You have entered the container.");
-  inputRadio.checked ? console.log(inputRadio.id) : console.log("".concat(inputRadio.id, " not checked"));
+// objectives to be achieved
+
+/*
+    1. When submit button is clicked the display for the thank you page becomes flex, and z-index becomes higher than 2
+        1a. Note you cannot add transitions to display property in css. 
+        
+    2. When clicking on the ratings button, the value of that button should be displayed instead of the generic text
+
+*/
+var submitBtn = document.getElementById("submit_btn"); // 1
+
+var thankyouCard = document.getElementById("thankyou_card"); //1
+
+var oneStar = document.getElementById('1'); //2
+
+var twoStar = document.getElementById('2'); //2
+
+var threeStar = document.getElementById('3'); //2
+
+var fourStar = document.getElementById('4'); //2
+
+var fiveStar = document.getElementById('5'); //2
+
+var displayRate = document.getElementById("rating"); //2
+
+var submitClick = function submitClick() {
+  //1
+  thankyouCard.style.display = "flex";
+  thankyouCard.style.zIndex = "10";
+};
+
+submitBtn.addEventListener("click", submitClick); // 1 
+
+oneStar.addEventListener("click", function () {
+  displayRate.innerText = oneStar.dataset.value;
+});
+twoStar.addEventListener("click", function () {
+  displayRate.innerText = twoStar.dataset.value;
+});
+threeStar.addEventListener("click", function () {
+  displayRate.innerText = threeStar.dataset.value;
+});
+fourStar.addEventListener("click", function () {
+  displayRate.innerText = fourStar.dataset.value;
+});
+fiveStar.addEventListener("click", function () {
+  displayRate.innerText = fiveStar.dataset.value;
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -152,7 +194,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51554" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61153" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -27,21 +27,21 @@
         </p>
   
         <div class="rate__container">
-          <button class="rate__container--numbers" id="1">1</button>
-          <button class="rate__container--numbers" id="2">2</button>
-          <button class="rate__container--numbers" id="3">3</button>
-          <button class="rate__container--numbers" id="4">4</button>
-          <button class="rate__container--numbers" id="5">5</button>
+          <button class="rate__container--numbers" data-value="1" id="1">1</button>
+          <button class="rate__container--numbers" data-value="2" id="2">2</button>
+          <button class="rate__container--numbers" data-value="3" id="3">3</button>
+          <button class="rate__container--numbers" data-value="4" id="4">4</button>
+          <button class="rate__container--numbers" data-value="5" id="5">5</button>
         </div>
   
-        <button class="rate__submit">SUBMIT</button>
+        <button class="rate__submit" id="submit_btn">SUBMIT</button>
       </section>
 
-      <section class="card__thankyou">
+      <section class="card__thankyou" id="thankyou_card">
         <img src="images/illustration-thank-you.svg" alt="thank you icon" class="card__thankyou--img">
 
         <div class="card__thankyou--rate">
-          You selected <span class="card__thankyou--rating" id="rating"> 4 </span> out of 5
+          You selected <span class="card__thankyou--rating" id="rating"></span> out of 5
         </div>
 
         <h1 class="card__thankyou--thankyou">Thank you!</h1>
@@ -57,10 +57,10 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://imsan.netlify.app/" target="_blank"><img id="home__website" src="./images/home.png" alt="Developed By Ibrahim San"></a>
   </div>
 
 
-
+<script src="script.js"></script>
 </body>
 </html>
