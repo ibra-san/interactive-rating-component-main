@@ -24,8 +24,16 @@ const rateTitle = document.getElementById("rate__title");
 const rateIcon = document.getElementById("rate__star--icon"); 
 
 const submitClick = () => {  
-    thankyouCard.style.display = "flex"; 
-    thankyouCard.style.zIndex = "10";
+    if (oneStar.getAttribute("class").includes("selected") || twoStar.getAttribute("class").includes("selected") || threeStar.getAttribute("class").includes("selected") || fourStar.getAttribute("class").includes("selected") || fiveStar.getAttribute("class").includes("selected"))  { 
+        console.log("yes");
+        thankyouCard.style.display = "flex"; 
+        thankyouCard.style.zIndex = "10";
+        oneStar.classList.remove("selected"); 
+    } else { 
+        console.log("no")
+        thankyouCard.style.display = "none";
+    }
+   
 }
 
 
@@ -35,39 +43,56 @@ submitBtn.addEventListener("click", submitClick);
 
 oneStar.addEventListener("click", () => { 
     displayRate.innerText = oneStar.dataset.value;
+    oneStar.classList.add("selected"); 
     
 })
 
 twoStar.addEventListener("click", () => { 
     displayRate.innerText = twoStar.dataset.value;
+    twoStar.classList.add("selected"); 
 })
 
 threeStar.addEventListener("click", () => { 
     displayRate.innerText = threeStar.dataset.value;
+    threeStar.classList.add("selected"); 
     
 })
 
 fourStar.addEventListener("click", () => { 
     displayRate.innerText = fourStar.dataset.value;
+    fourStar.classList.add("selected"); 
     
 })
 
 fiveStar.addEventListener("click", () => { 
     displayRate.innerText = fiveStar.dataset.value;
+    fiveStar.classList.add("selected"); 
     
 })
 
 rateIcon.addEventListener("click", ()=> { 
-     displayRate.innerText = " ";
+    oneStar.classList.remove("selected"); 
+    twoStar.classList.remove("selected");
+    threeStar.classList.remove("selected");
+    fourStar.classList.remove("selected");
+    fiveStar.classList.remove("selected");
 })
 
 
 rateText.addEventListener("click", ()=> { 
-     displayRate.innerText = " ";
+    oneStar.classList.remove("selected"); 
+    twoStar.classList.remove("selected");
+    threeStar.classList.remove("selected");
+    fourStar.classList.remove("selected");
+    fiveStar.classList.remove("selected");
 })
 
 
 rateTitle.addEventListener("click", ()=> { 
-     displayRate.innerText = " ";
+    oneStar.classList.remove("selected"); 
+    twoStar.classList.remove("selected");
+    threeStar.classList.remove("selected");
+    fourStar.classList.remove("selected");
+    fiveStar.classList.remove("selected");
 })
 
